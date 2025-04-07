@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         SONAR_HOST_URL = 'https://sonarcloud.io'
-        SONAR_ORG = 'hema1711'  // Replace with your SonarCloud organization name
+        SONAR_ORG = 'Hema1711'  // Replace with your SonarCloud organization name
         SONAR_PROJECT_KEY = 'Hema1711_sonar-app' // Replace with your SonarCloud project key
     }
 
