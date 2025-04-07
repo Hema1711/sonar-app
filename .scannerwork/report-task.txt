@@ -1,0 +1,7 @@
+organization=hema1711
+projectKey=Hema1711_sonar-app
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.61474
+dashboardUrl=https://sonarcloud.io/dashboard?id=Hema1711_sonar-app
+ceTaskId=AZYPDDt6hfe4TD4Hss_h
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZYPDDt6hfe4TD4Hss_h
