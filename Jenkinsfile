@@ -14,21 +14,6 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
-            steps {
-                script {
-                    bat 'npm install'
-                }
-            }
-        }
-
-        stage('Build React App') {
-            steps {
-                script {
-                    bat 'npm run build'
-                }
-            }
-        }
 
         stage('Run SonarCloud Analysis') {
             steps {
