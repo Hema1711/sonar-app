@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         SONAR_HOST_URL = 'https://sonarcloud.io'
-        SONAR_ORG = 'Hema1711'  // Replace with your SonarCloud organization name ///
+        SONAR_ORG = 'Hema1711'  // Replace with your SonarCloud organization name
         SONAR_PROJECT_KEY = 'Hema1711_sonar-app' // Replace with your SonarCloud project key
     }
 
@@ -16,17 +16,13 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                script {
-                    bat 'npm install'
-                }
+                bat 'npm install'
             }
         }
 
         stage('Build React App') {
             steps {
-                script {
-                    bat 'npm run build'
-                }
+                bat 'npm run build'
             }
         }
 
@@ -34,12 +30,12 @@ pipeline {
             steps {
                 withSonarQubeEnv('SonarCloud') {
                     bat '''
-                        sonar-scanner \
-                        -Dsonar.projectKey=$SONAR_PROJECT_KEY \
-                        -Dsonar.organization=$SONAR_ORG \
-                        -Dsonar.sources=src \
-                        -Dsonar.host.url=$SONAR_HOST_URL \
-                        -Dsonar.login=${SONARCLOUD_TOKEN}
+                        sonar-scanner ^
+                        -Dsonar.projectKey=%SONAR_PROJECT_KEY% ^
+                        -Dsonar.organization=%SONAR_ORG% ^
+                        -Dsonar.sources=src ^
+                        -Dsonar.host.url=%SONAR_HOST_URL% ^
+                        -Dsonar.login=%SONARCLOUD_TOKEN%
                     '''
                 }
             }
