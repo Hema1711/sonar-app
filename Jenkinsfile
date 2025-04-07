@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/Hema1711/sonar-app.git'  // Replace with your GitHub repo
+                git branch: 'main', url: 'https://github.com/Hema1711/sonar-app.git'  // Replace with your GitHub repo
             }
         }
 
