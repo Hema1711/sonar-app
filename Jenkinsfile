@@ -25,7 +25,7 @@ pipeline {
         stage('Build React App') {
             steps {
                 script {
-                    sh 'npm run build'
+                    bat 'npm run build'
                 }
             }
         }
@@ -33,7 +33,7 @@ pipeline {
         stage('Run SonarCloud Analysis') {
             steps {
                 withSonarQubeEnv('SonarCloud') {
-                    sh '''
+                    bat '''
                         sonar-scanner \
                         -Dsonar.projectKey=$SONAR_PROJECT_KEY \
                         -Dsonar.organization=$SONAR_ORG \
